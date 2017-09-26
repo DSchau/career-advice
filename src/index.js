@@ -4,12 +4,9 @@ import 'es6-promise/auto';
 
 import { Deck } from 'spectacle';
 
-import TwitterIcon from 'react-icons/lib/fa/twitter';
-import GithubIcon from 'react-icons/lib/fa/github';
-
 import createTheme from 'spectacle/lib/themes/default';
 
-import SlideDeck from './slides/';
+import makeSlideDeck from './slides';
 
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
@@ -36,7 +33,7 @@ export default class Presentation extends React.Component {
         progress="bar"
         transitionDuration={500}
       >
-        {SlideDeck()}
+        {makeSlideDeck()}
       </Deck>
     );
   }

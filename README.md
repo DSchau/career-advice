@@ -1,10 +1,7 @@
-# CSS in JS: Benefits, Drawbacks, and Libraries
+# Career Advice: ... and other stuff too
 
-The slidedeck (powered by [spectacle][spectacle]) for the CSS in JS presentation delivered at Thunderplains 2017
+The slidedeck (powered by [spectacle][spectacle]) for a presentation given at Creighton University (my alma mater).
 
-## Links
-
-Also check out the [CSS in JS Playground][playground]
+The presentation is intended to give some high level advice about careers and interviewing tips to graduating seniors, and other stuff too!
 
 [spectacle]: https://github.com/FormidableLabs/spectacle
-[playground]: https://github.com/dschau/css-in-js-playground

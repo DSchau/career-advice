@@ -15,44 +15,23 @@ import { Image } from 'components';
 
 const images = {
   titleSlide: require('./assets/images/title-slide-optimized.jpeg'),
-  nebraskaJs: require('./assets/images/nebraskajs.svg'),
   opiLogo: require('./assets/images/object-partners.svg'),
   opiMn: require('./assets/images/opi-mn-optimized.jpeg'),
-  me: require('./assets/images/me-optimized.jpeg'),
-  okc: require('./assets/images/okc-optimized.jpeg'),
-  thunderPlains: require('./assets/images/thunder-plains-optimized.png'),
-  nebraskaActual: require('./assets/images/nebraska-actual-optimized.jpeg'),
-  nebraskaPerception: require('./assets/images/nebraska-perception-optimized.jpeg')
+  me: require('./assets/images/me-optimized.jpeg')
 };
 
 preloader(images);
 
-// TODO: Replace nebraskaJS with Thunderplains
 export const Intro = () =>
   <div
     style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       justifyContent: 'center',
       minHeight: '85vh'
     }}
   >
-    <div
-      style={{
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        width: '100%'
-      }}
-    >
-      <Link
-        href="https://www.meetup.com/nebraskajs/events/238363540/"
-        target="_blank"
-      >
-        <Image src={images.nebraskaJs} style={{ maxHeight: 50 }} />
-      </Link>
-    </div>
     <Layout>
       <Fill
         style={{
@@ -62,13 +41,20 @@ export const Intro = () =>
           paddingRight: 20
         }}
       >
-        <Heading size={1} caps fit textFont="Bitter">
-          CSS in JS
+        <Heading size={1} caps textFont="Bitter">
+          Career Advice
         </Heading>
       </Fill>
-      <Fill margin={10}>
-        <Heading size={4} textColor="primary" textAlign="left">
-          Benefits, Drawbacks, and Tools
+      <Fill
+        margin={10}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <Heading size={5} textColor="primary" textAlign="left">
+          &hellip; and some other things too
         </Heading>
       </Fill>
     </Layout>
@@ -84,7 +70,7 @@ export const Intro = () =>
         href="https://dschau.github.io/css-in-js-presentation/"
         textColor="rgba(255, 255, 255, 0.7)"
       >
-        https://dschau.github.io/css-in-js-presentation
+        https://dschau.github.io/career-advice
       </Link>
     </div>
   </div>;
@@ -97,11 +83,6 @@ My name is Dustin Schau, and I'm going to hopefully teach you all about CSS in J
   `
 };
 
-/* TODO: Add back for Thunderplains
-export const Sponsors = () => (
-  <Heading size={2} caps fit>Sponsors</Heading>
-);
-*/
 export const AboutMe = () =>
   <Layout>
     <Fill
@@ -114,7 +95,7 @@ export const AboutMe = () =>
       }}
     >
       <Heading size={2} caps fit>
-        Who?
+        Who's this guy?
       </Heading>
       <Heading size={6} style={{ display: 'flex' }}>
         <TwitterIcon
@@ -161,6 +142,15 @@ AboutMe.Props = {
   `
 };
 
+export const UnionPacific = () =>
+  <Heading size={2} fit caps>
+    Union Pacific
+  </Heading>;
+
+UnionPacific.Props = {
+  bgColor: 'secondary'
+};
+
 export const ObjectPartners = () =>
   <Image src={images.opiLogo} style={{ width: '100%' }} />;
 
@@ -172,72 +162,5 @@ ObjectPartners.Props = {
 - Specialize in JVM and frontend development of all sorts
 - About 100 consultants between here, MN, and Chicago
 - Come talk to me after if you'd like to learn more!  
-  `
-};
-
-// TODO: Remove for Thunderplains
-export const ThunderPlains = () => <Image src={images.thunderPlains} />;
-
-ThunderPlains.Props = {
-  bgImage: images.okc,
-  bgDarken: 0.6,
-  notes: `
-- I'll be giving this presentation at a great JS conference in Oklahoma City called Thunderplains
-- November 3rd
-- This is a bit of a dry run, so any feedback (good, bad, or otherwise) afterwards is sincerely appreciated  
-- I'll have a feedback form, and I would sincerely appreciate if anyone would be willing to fill it out!
-  `
-};
-
-/*
- * TODO: Add back for Thunderplains
-export const NebraskaPerception = {
-  Props: {
-    bgImage: images.nebraskaPerception,
-    bgDarken: 0.2
-  }
-};
-
-export const NebraskaActual = {
-  Props: {
-    bgImage: images.nebraskaActual,
-    bgDarken: 0.2
-  }
-};
-*/
-
-export const FromHere = () => <WtfFace height={256} width={256} />;
-
-FromHere.Props = {
-  notes: `
-- Many of you probably have a pretty negative perception of CSS in JS
-- It goes against the "seperation of concerns" that has been ingrained and regularly re-enforced
-- It feels weird, feels unclean, and feels like it's a solution looking for a problem
-  `
-};
-
-export const ToHere = () =>
-  <Layout>
-    <Fill>
-      <Ambivalence height={256} width={256} />
-    </Fill>
-    <Appear>
-      <Fill>
-        <HeartEyes height={256} width={256} />
-      </Fill>
-    </Appear>
-  </Layout>;
-
-ToHere.Props = {
-  notes: `
-- My goal is to take you from that initial perception/feeling to at least understanding/slightly skeptical of the practice
-- If I'm successful, maybe even a few of you will leave and want to use/experiment with some of these technologies
-
-## Agenda
-
-- Discussion of the problems of CSS
-- Defining what CSS in JS is, and how it can solve some of these problems
-- Discussing some various CSS in JS libraries, any real world examples of usage of these
-- Finishing up with some discussion of drawbacks of CSS in JS and some quick demos
   `
 };

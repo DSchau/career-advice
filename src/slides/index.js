@@ -4,13 +4,8 @@ import CodeSlide from 'spectacle-code-slide';
 import marked from 'marked';
 
 import * as Intro from './intro';
-import * as CSSProblems from './css-problems';
-import * as Definition from './definition-and-benefits';
-import * as Libraries from './libraries';
-import * as WritingCssInJs from './writing-css-in-js';
-import * as Theming from './theming';
-import * as CSSInJsProblems from './css-in-js-problems';
-import * as WrapUp from './wrap-up';
+import * as WishIKnew from './wish-i-knew';
+import * as Advice from './advice';
 import * as Conclusion from './conclusion';
 
 /*
@@ -20,17 +15,7 @@ import * as Conclusion from './conclusion';
  * into the base level <Slide> component
  */
 export default function makeSlides() {
-  return [
-    Intro,
-    CSSProblems,
-    Definition,
-    Libraries,
-    WritingCssInJs,
-    Theming,
-    CSSInJsProblems,
-    WrapUp,
-    Conclusion
-  ].map((Slides, rootIndex) => {
+  return [Intro, WishIKnew, Advice, Conclusion].map((Slides, rootIndex) => {
     return (
       <SlideSet key={rootIndex}>
         {Object.keys(Slides).map((key, index) => {

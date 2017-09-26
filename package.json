@@ -1,7 +1,7 @@
 {
-  "name": "css-in-js-presentation",
+  "name": "career-advice",
   "version": "1.0.0",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "A simple presentation given to senior(s) at my alma mater concerning things I wish I had known at that age as well as basic career and interview advice",
   "main": "dist/bundle.js",
   "scripts": {
     "precommit": "lint-staged",

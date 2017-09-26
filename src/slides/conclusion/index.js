@@ -14,77 +14,10 @@ import { Image } from 'components';
 
 const images = {
   thankYou: 'https://media.giphy.com/media/KJ1f5iTl4Oo7u/giphy.gif',
-  questions: 'https://media.giphy.com/media/l4FGroaKiE5uuMBiM/giphy.gif',
-  feedback: require('./assets/images/feedback-optimized.png')
+  questions: 'https://media.giphy.com/media/l4FGroaKiE5uuMBiM/giphy.gif'
 };
 
 preloader(images);
-
-export const Attributions = () =>
-  <div>
-    <Heading size={3} textColor="secondary" caps>
-      Attributions
-    </Heading>
-    <List style={{ listStyleType: 'none', padding: 0 }}>
-      {[
-        [
-          'https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660',
-          'A Unified Styling Language (Blog Post)'
-        ],
-        [
-          'https://markdalgleish.github.io/presentation-a-unified-styling-language/#14',
-          'A Unified Styling Language (Presentation)'
-        ],
-        ['https://speakerdeck.com/vjeux/react-css-in-js', 'React: CSS in JS'],
-        [
-          'http://mxstbr.blog/2016/11/inline-styles-vs-css-in-js/',
-          'Writing your styles in JS ≠ writing inline styles'
-        ],
-        [
-          'https://speakerdeck.com/didoo/let-there-be-peace-on-css',
-          'Let there be Peace on CSS'
-        ],
-        [
-          'https://reactarmory.com/answers/how-can-i-use-css-in-js-securely',
-          'How Can I use CSS in JS Securely?'
-        ]
-      ].map(([href, description]) => {
-        return (
-          <ListItem key={description}>
-            <GlobeIcon color="white" style={{ marginRight: 8 }} />
-            <Link href={href} textColor="white">
-              {description}
-            </Link>
-          </ListItem>
-        );
-      })}
-    </List>
-  </div>;
-
-export const Links = () =>
-  <div>
-    <Heading size={3} textColor="secondary" caps>
-      Requisite Links
-    </Heading>
-    <List style={{ listStyleType: 'none', padding: 0 }}>
-      {[
-        [
-          'https://dschau.github.io/css-in-js-playground/',
-          'CSS in JS Playground'
-        ],
-        ['https://github.com/DSchau/css-in-js-presentation', 'Slidedeck Repo']
-      ].map(([href, description]) => {
-        return (
-          <ListItem key={description}>
-            <GlobeIcon color="white" style={{ marginRight: 8 }} />
-            <Link href={href} textColor="white">
-              {description}
-            </Link>
-          </ListItem>
-        );
-      })}
-    </List>
-  </div>;
 
 export const Questions = class extends Component {
   static Props = {
@@ -166,14 +99,4 @@ FinTheEndThatsAllFolks.Props = {
 - Special thanks to Tim Hemmer for helping get this set up, as well as to all of the NebraskaJS coordinators
 - An extra special thanks to each of you for coming, it means a lot!
   `
-};
-
-// TODO: Remove this slide for Thunderplains
-export const Feedback = () =>
-  <Link href="https://dustinschau.com/css-in-js-feedback" target="_blank">
-    <Image src={images.feedback} />
-  </Link>;
-
-Feedback.Props = {
-  bgColor: 'secondary'
 };
