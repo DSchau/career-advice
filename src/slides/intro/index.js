@@ -69,7 +69,7 @@ export const Intro = () =>
       }}
     >
       <Link
-        href="https://dschau.github.io/css-in-js-presentation/"
+        href="https://dschau.github.io/career-advice/"
         textColor="rgba(255, 255, 255, 0.7)"
       >
         https://dschau.github.io/career-advice
