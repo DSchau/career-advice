@@ -138,7 +138,8 @@ export const AboutMe = () =>
 
 AboutMe.Props = {
   notes: `
-- Frontend developer expert, specializing in all things JavaScript
+- Graduated with a CS degree from Creighton in 2013
+- Frontend developer specialist, specializing in all things JavaScript
 - Do a fair bit of backend and utility development in NodeJS, e.g. backend services, build tooling, etc.
   `
 };
@@ -164,7 +165,7 @@ ObjectPartners.Props = {
   bgDarken: 0.8,
   notes: `
 - Transitioned to a great consulting company called Object Partners, Inc.
-  - Full stack consulants for a variety of clients and projects, including Best Buy, Target, Mutual of Omaha, TD Ameritrade, etc.
-  - Of our graduating class of 9 CS majors in 2013, 3 have worked for Object Partners, and 2 currently work there (Cody and myself)
+- Full stack consulants for a variety of clients and projects, including Best Buy, Target, Mutual of Omaha, TD Ameritrade, etc.
+- Of our graduating class of 9 CS majors in 2013, 3 have worked for Object Partners, and 2 currently work there (Cody and myself)
   `
 };

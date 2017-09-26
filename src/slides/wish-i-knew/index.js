@@ -4,8 +4,11 @@ import { Heading, S as Span } from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 
 const images = {
-  matrix: 'https://media.giphy.com/media/quEsMOrr3hmQ8/giphy.gif'
+  matrix: 'https://media.giphy.com/media/quEsMOrr3hmQ8/giphy.gif',
+  testing: 'https://media.giphy.com/media/gw3IWyGkC0rsazTi/giphy.gif'
 };
+
+preloader(images);
 
 export const Intro = () =>
   <Heading size={1} fit caps textFont="Bitter" textColor="white">
@@ -16,12 +19,12 @@ Intro.Props = {
   bgColor: 'secondary'
 };
 
-export const ProgramInSpareTime = () =>
+export const LearnInYourSpareTime = () =>
   <Heading size={2} caps fit>
-    Program in your Spare Time
+    Learn in your Spare Time
   </Heading>;
 
-ProgramInSpareTime.Props = {
+LearnInYourSpareTime.Props = {
   notes: `
 - I think I took my biggest professional leap when I began programming, reading articles, etc. outside of work and outside of class
 - Some of you may already do this, and that's even better!
@@ -65,11 +68,13 @@ VersionControlSystems.Props = {
 };
 
 export const Testing = () =>
-  <Heading size={2} caps fit>
+  <Heading size={2} caps fit textColor="white">
     Value of Writing Tests
   </Heading>;
 
 Testing.Props = {
+  bgImage: images.testing,
+  bgDarken: 0.5,
   notes: `
 - We rarely discussed much testing, but writing tests for my code has sharply increased the overall code quality and reduced bugs
 - If you're writing Java; Spock or JUnit are great choices

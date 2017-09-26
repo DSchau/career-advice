@@ -21,13 +21,7 @@ preloader(images);
 
 export const Questions = class extends Component {
   static Props = {
-    bgImage: images.questions,
-    notes: `
-- I remember being incredibly nervous; college/class work was what I knew for the past 4 years
-  - The transition to "real world" was daunting
-- These nerves are normal
-- Put yourself out there. interview at a bunch of places. be yourself. and it'll go great and you'll succeed beyond your wildest dreams
-    `
+    bgImage: images.questions
   };
 
   state = {
@@ -102,7 +96,5 @@ export const FinTheEndThatsAllFolks = () =>
 FinTheEndThatsAllFolks.Props = {
   bgImage: images.thankYou,
   notes: `
-- Special thanks to Tim Hemmer for helping get this set up, as well as to all of the NebraskaJS coordinators
-- An extra special thanks to each of you for coming, it means a lot!
   `
 };

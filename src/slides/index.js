@@ -6,6 +6,7 @@ import marked from 'marked';
 import * as Intro from './intro';
 import * as WishIKnew from './wish-i-knew';
 import * as Advice from './advice';
+import * as WrapUp from './wrap-up';
 import * as Conclusion from './conclusion';
 
 /*
@@ -15,7 +16,13 @@ import * as Conclusion from './conclusion';
  * into the base level <Slide> component
  */
 export default function makeSlides() {
-  return [Intro, WishIKnew, Advice, Conclusion].map((Slides, rootIndex) => {
+  return [
+    Intro,
+    WishIKnew,
+    Advice,
+    WrapUp,
+    Conclusion
+  ].map((Slides, rootIndex) => {
     return (
       <SlideSet key={rootIndex}>
         {Object.keys(Slides).map((key, index) => {
