@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 import { Heading, S as Span } from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
