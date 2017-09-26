@@ -17,6 +17,8 @@ const images = {
   titleSlide: require('./assets/images/title-slide-optimized.jpeg'),
   opiLogo: require('./assets/images/object-partners.svg'),
   opiMn: require('./assets/images/opi-mn-optimized.jpeg'),
+  upLogo: require('./assets/images/up.svg'),
+  upBackground: require('./assets/images/up-bg-optimized.jpeg'),
   me: require('./assets/images/me-optimized.jpeg')
 };
 
@@ -77,9 +79,9 @@ export const Intro = () =>
 
 Intro.Props = {
   bgImage: images.titleSlide,
-  bgDarken: 0.5,
+  bgDarken: 0.75,
   notes: `
-My name is Dustin Schau, and I'm going to hopefully teach you all about CSS in JS today. We'll start with some drawbacks of CSS that led to the creation of these libraries, then discuss advantages of CSS in JS over CSS, shift to discussion of some common patterns, utilities, and libraries to instrument CSS in JS, and then finally end with a (hopefully fair!) illustration of the drawbacks of CSS in JS. Let's get started!
+
   `
 };
 
@@ -136,19 +138,22 @@ export const AboutMe = () =>
 
 AboutMe.Props = {
   notes: `
-- Frontend developer specializing in all things JavaScript
-- Done a bit of everything, whether that's jQuery, Angular, React, you name it
-- I've also done a fair bit of everything in CSS land, whether it's vanilla CSS, LESS, SASS, CSS Modules, and (of course) CSS in JS
+- Frontend developer expert, specializing in all things JavaScript
+- Do a fair bit of backend and utility development in NodeJS, e.g. backend services, build tooling, etc.
   `
 };
 
 export const UnionPacific = () =>
-  <Heading size={2} fit caps>
-    Union Pacific
-  </Heading>;
+  <Image src={images.upLogo} style={{ height: '33%', width: '33%' }} />;
 
 UnionPacific.Props = {
-  bgColor: 'secondary'
+  bgImage: images.upBackground,
+  bgDarken: 0.5,
+  notes: `
+- Started my internship at Union Pacific as a full time intern winter of 2013 (aka my last year)
+- Learned an immense amount in my ~3 years at Union Pacific; great place to start my career
+- Generally a great place to be and they do a lot of things right
+  `
 };
 
 export const ObjectPartners = () =>
@@ -158,9 +163,8 @@ ObjectPartners.Props = {
   bgImage: images.opiMn,
   bgDarken: 0.8,
   notes: `
-- I work at a great company called Object Partners
-- Specialize in JVM and frontend development of all sorts
-- About 100 consultants between here, MN, and Chicago
-- Come talk to me after if you'd like to learn more!  
+- Transitioned to a great consulting company called Object Partners, Inc.
+  - Full stack consulants for a variety of clients and projects, including Best Buy, Target, Mutual of Omaha, TD Ameritrade, etc.
+  - Of our graduating class of 9 CS majors in 2013, 3 have worked for Object Partners, and 2 currently work there (Cody and myself)
   `
 };
